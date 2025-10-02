@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <script src="https://kit.fontawesome.com/16ea9a12e7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+
+<body>
+
+    <main class="main">
+
+        <header class="header">
+
+            <div>
+                <img src="images/ray-logo.svg" class="logo" alt="logo of a ray">
+            </div>
+
+            <!---
+            <a class="icon" onclick="dropNav()"><i class="fa-solid fa-bars"></i></a>
+            -->
+
+            <div class="nav" id="drop-nav">
+
+                <a href="#" class="active">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">About us</a>
+
+                <div class="btn-container"> <!-- added this to put flex-end on the menu-btn -->
+                    <button onclick="dropNav()" class="menu-btn">
+                        Menu
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+
+                <div class="dropdown">
+                    <div class="dropdown-content">
+                        <a href="#">Home</a>
+                        <a href="#">Gallery</a>
+                        <a href="#">About us</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section>
+
+            <div class="main-content">
+
+                <h1 class="main-title">Blue Ray Aquarium</h1>
+
+                <div class="home-images">
+                    <img src="images/blue-ray.webp" alt="blue ray fish" class="home-image">
+                    <img src="images/jellyfish.jpg" alt="jellyfish" class="home-image">
+                    <img src="images/whaleshark.jpg" alt="whale shark" class="home-image">
+                </div>
+
+                <div>
+                    <video class="home-video" autoplay muted loop>
+                        <source src="videos/vid-jellyfish.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        function dropNav() {
+            let drop = document.getElementById("drop-nav");
+            if (drop.className === "nav") {
+                drop.className += " responsive";
+            } else {
+                drop.className = "nav";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
