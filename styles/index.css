@@ -174,10 +174,8 @@
   color: white;
 }
 
-/* the hover effect doesnt seem to be working on nav:a when its through the menu-btn for some reason */
-
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #66999B;
   color: black;
 }
 
